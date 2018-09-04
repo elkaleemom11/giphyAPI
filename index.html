@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crazy Plants</title>
+
+    <!--Bootstrap CDN link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    <!--Bootswatch link-->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/simplex/bootstrap.min.css">
+
+    <!--Reset css file-->
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!--External css file-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!--JQuery link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Font Awesome link-->
+    <script src="https://use.fontawesome.com/abd289e58f.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10">
+                <!--Site header-->
+                <div class="card mb-4 bg-primary">
+                    <div class="card-body">
+                        <h1 class="card-title">Crazy Plants Gifs</h1>
+                        <h5 class="card-text">Search for gifs of your favorite plants.</h5>
+                        <img class="pr-3" src="assets/images/capture_20180903152013.png" alt="crazy plants">
+                        <img class="pr-3" src="assets/images/pottedplant.jpg" alt="potted plant">
+                    </div>
+                </div>
+            </div>
+
+            <!--Random gif goes here. Gif will appear to the right of the header on md size screens and below the header on sm or xs screens.-->
+            <div class="col-xs-12 col-sm-12 col-md-2" id="main-header-image">
+            </div>
+
+        </div>
+
+        <div class="row">
+            <!--Create a placeholder section/div to hold the buttons-->
+            <div class="col-md-7 col-sm-12 col-xs-12 mb-2" id="giphy-buttons">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5><img src="assets/images/windowsill.png" alt="plant"> Select a plant</h5>
+                    </div>
+                    <!--New buttons created by the user will get dumped here-->
+                    <div class="card-body bg-secondary" id="plant-btn-div">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-12 col-xs-12 mb-2">
+                <!--Create a search box and submit/add button-->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5><img class="pr-2" src="assets/images/brownplant.png" alt="brown plant">Add your favorite plant
+                            here!
+                        </h5>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <p>For best results, enter your favorite plant here. For example, sunflower.</p>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="sunflower" aria-label="Search" id="plant-input">
+                            <button class="btn btn-dark my-2 my-sm-0" type="submit" id="submit-button"><i class="fa fa-plus"
+                                    aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-4">
+            <div class="col-md-12">
+                <!--Create a section for displaying the gif search results-->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5><img src="assets/images/groupplants.png" alt="green plants"> Gif search results
+                        </h5>
+                    </div>
+                    <div class="card-body bg-secondary" id="results-div">
+                        <div class="row">
+                            <!--When the user clicks plant button, tell the user to click a gif to play that gif. The user will need to click it again to pause. When the user clicks a plant button, that text will go here in the click-to-play-text div.-->
+                            <div class="col-md-12" id="click-to-play-text">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!--The first three gifs retrieved from the GIPHY API call will go here in results-div-col1-->
+                            <div class="col-xs-12 col-sm-12 col-md-4" id="results-div-col1">
+
+                            </div>
+                            <!--The next four gifs retrieved from the GIPHY API call will go here in results-div-col2-->
+                            <div class="col-xs-12 col-sm-12 col-md-4" id="results-div-col2">
+
+                            </div>
+                            <!--The last three gifs retrieved from the GIPHY API call will go here in results-div-col3-->
+                            <div class="col-xs-12 col-sm-12 col-md-4" id="results-div-col3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Link to Javascript file-->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+
+<!-- direct footer. -->
+
+<footer class="pagebottom">
+
+    <div class="bottom-center">
+        <a href="http://github.com/elkaleemom11/elkaleemom11.github.io">
+            <div class="bottom-name">Connie Elbon</div>
+        </a>
+        <div class="bottom-nav">
+
+            <a href="https://elkaleemom11.github.io/giphyAPI/">
+                <i id="social-git" class="fa fa-github-square fa-3x social"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/connie-elbon-18640652/">
+                <i id="social-linked" class="fa fa-linkedin-square fa-3x social"></i>
+            </a>
+
+        </div>
+    </div>
+</footer>
+
+
+<script src="app.js"></script>
+</body>
+
+</html>

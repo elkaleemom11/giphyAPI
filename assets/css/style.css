@@ -1,0 +1,25 @@
+body {
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.item {
+	position:relative; 
+	max-width:100%; 
+	margin: 0 auto; 
+	padding: 0px 10px 0px 10px;
+}
+
+#results-div {
+	position:relative; 
+	width:100%;
+	max-width: 100%; 
+	margin: 0 auto; 
+	padding: 20px; 
+	text-align:center;
+}
+
+#header-image {
+	float: right;
+}
+
